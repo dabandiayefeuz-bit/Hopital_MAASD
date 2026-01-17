@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez l'Hôpital Mame Abdoul Aziz Sy Dabakh de Tivaouane - Formulaire de contact, téléphone et coordonnées.">
+    <title>Contact - Hôpital Mame Abdoul Aziz Sy Dabakh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-icon">🏥</span>
+                    <div class="logo-text">
+                        <h1>Hôpital Mame Abdoul Aziz Sy Dabakh</h1>
+                        <p>Tivaouane, Sénégal</p>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Menu mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="equipe.html">Équipe</a></li>
+                    <li><a href="infos-pratiques.html">Infos pratiques</a></li>
+                    <li><a href="avis.html">Avis</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Nous sommes là pour répondre à vos questions</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="contact-intro">
+                <p class="lead">Pour toute question, demande d'information ou besoin de renseignements, n'hésitez pas à nous contacter. Notre équipe est disponible pour vous accompagner.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-wrapper">
+                    <h2>Envoyez-nous un message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required placeholder="Votre nom">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Votre adresse email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="consultation">Demande de consultation</option>
+                                <option value="information">Demande d'information</option>
+                                <option value="rendez-vous">Prise de rendez-vous</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                    </form>
+
+                    <div id="formMessage" class="form-message" style="display: none;"></div>
+                </div>
+
+                <div class="contact-info-sidebar">
+                    <div class="contact-info-card">
+                        <h3>📞 Téléphone</h3>
+                        <p><strong>Standard :</strong></p>
+                        <a href="tel:+221339551527" class="contact-link-large">+221 33 955 15 27</a>
+                        <p style="margin-top: 1.5rem;"><strong>Urgences (24h/24) :</strong></p>
+                        <a href="tel:+221339551527" class="contact-link-large emergency-link">+221 33 955 15 27</a>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>📍 Adresse</h3>
+                        <p>Hôpital Mame Abdoul Aziz Sy Dabakh</p>
+                        <p>W5WV+Q6 Tivaouane</p>
+                        <p>Sénégal</p>
+                        <a href="infos-pratiques.html" class="btn btn-secondary" style="margin-top: 1rem;">Voir sur la carte</a>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>🕐 Horaires</h3>
+                        <p><strong>Service d'urgence :</strong></p>
+                        <p>24h/24, 7j/7</p>
+                        <p style="margin-top: 1rem;"><strong>Consultations :</strong></p>
+                        <p>Sur rendez-vous et en urgence</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h3>💡 Note importante</h3>
+                        <p>Pour les urgences médicales, appelez directement le numéro ci-dessus. Ne perdez pas de temps avec le formulaire en cas d'urgence vitale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="emergency-banner">
+        <div class="container">
+            <div class="emergency-content">
+                <div class="emergency-icon">🚨</div>
+                <div class="emergency-text">
+                    <h3>Besoin d'aide en urgence ?</h3>
+                    <p>Notre service d'urgence est disponible 24h/24</p>
+                </div>
+                <a href="tel:+221339551527" class="btn btn-emergency">Appeler : +221 33 955 15 27</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hôpital Mame Abdoul Aziz Sy Dabakh</h3>
+                    <p>Tivaouane, Sénégal</p>
+                    <p>Établissement public de santé au service de la population</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 W5WV+Q6 Tivaouane, Sénégal</p>
+                    <p>📞 <a href="tel:+221339551527">+221 33 955 15 27</a></p>
+                    <p>🕐 Ouvert 24h/24</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="infos-pratiques.html">Infos pratiques</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hôpital Mame Abdoul Aziz Sy Dabakh - Tivaouane. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
