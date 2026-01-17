@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prenez rendez-vous en ligne à l'Hôpital Mame Abdoul Aziz Sy Dabakh de Tivaouane - Consultation médicale simple et rapide.">
+    <title>Prendre rendez-vous - Hôpital Mame Abdoul Aziz Sy Dabakh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <span class="logo-icon">🏥</span>
+                    <div class="logo-text">
+                        <h1>Hôpital Mame Abdoul Aziz Sy Dabakh</h1>
+                        <p>Tivaouane, Sénégal</p>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Menu mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="equipe.html">Équipe</a></li>
+                    <li><a href="infos-pratiques.html">Infos pratiques</a></li>
+                    <li><a href="avis.html">Avis</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="rendez-vous.html" class="active btn-nav-appointment">Prendre rendez-vous</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Prendre rendez-vous</h1>
+            <p>Réservez votre consultation en ligne facilement</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="appointment-intro">
+                <p class="lead">Prenez rendez-vous pour une consultation médicale à l'Hôpital Mame Abdoul Aziz Sy Dabakh. Remplissez le formulaire ci-dessous et nous vous confirmerons votre rendez-vous dans les plus brefs délais.</p>
+                <div class="appointment-note">
+                    <p><strong>💡 Note importante :</strong> Pour les urgences médicales, appelez directement le <a href="tel:+221339551527">+221 33 955 15 27</a>. Ce formulaire est destiné aux consultations non urgentes.</p>
+                </div>
+            </div>
+
+            <div class="appointment-wrapper">
+                <div class="appointment-form-container">
+                    <h2>Formulaire de rendez-vous</h2>
+                    <form class="appointment-form" id="appointmentForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="patient-name">Nom complet du patient *</label>
+                                <input type="text" id="patient-name" name="patient-name" required placeholder="Votre nom complet">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="patient-age">Âge</label>
+                                <input type="number" id="patient-age" name="patient-age" min="0" max="150" placeholder="Âge">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="patient-phone">Numéro de téléphone *</label>
+                            <input type="tel" id="patient-phone" name="patient-phone" required placeholder="+221 XX XXX XX XX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="appointment-type">Type de consultation *</label>
+                            <select id="appointment-type" name="appointment-type" required>
+                                <option value="">Sélectionnez le type de consultation</option>
+                                <option value="medecine-generale">Médecine générale</option>
+                                <option value="specialiste">Consultation spécialisée</option>
+                                <option value="suivi">Consultation de suivi</option>
+                                <option value="bilan">Bilan de santé</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="preferred-date">Date souhaitée *</label>
+                                <input type="date" id="preferred-date" name="preferred-date" required min="">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferred-time">Heure souhaitée *</label>
+                                <select id="preferred-time" name="preferred-time" required>
+                                    <option value="">Sélectionnez une heure</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reason">Motif de la consultation *</label>
+                            <textarea id="reason" name="reason" rows="4" required placeholder="Décrivez brièvement le motif de votre consultation..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="urgency">Niveau d'urgence</label>
+                            <select id="urgency" name="urgency">
+                                <option value="normale">Normale</option>
+                                <option value="assez-urgente">Assez urgente</option>
+                                <option value="non-urgente">Non urgente</option>
+                            </select>
+                            <small class="form-hint">En cas d'urgence vitale, appelez directement le +221 33 955 15 27</small>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">J'accepte que mes données personnelles soient traitées pour la gestion de mon rendez-vous *</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Confirmer la demande de rendez-vous</button>
+                    </form>
+
+                    <div id="appointmentMessage" class="form-message" style="display: none;"></div>
+                </div>
+
+                <div class="appointment-info-sidebar">
+                    <div class="info-box">
+                        <h3>📋 Informations importantes</h3>
+                        <ul>
+                            <li>Merci de remplir tous les champs obligatoires (*)</li>
+                            <li>Nous vous confirmerons votre rendez-vous par téléphone</li>
+                            <li>Veuillez arriver 15 minutes avant l'heure prévue</li>
+                            <li>Pensez à apporter votre pièce d'identité</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>⏰ Horaires de consultation</h3>
+                        <p><strong>Lundi - Vendredi :</strong></p>
+                        <p>08:00 - 12:00 et 14:00 - 18:00</p>
+                        <p style="margin-top: 1rem;"><strong>Samedi :</strong></p>
+                        <p>08:00 - 13:00</p>
+                        <p style="margin-top: 1rem;"><strong>Dimanche :</strong></p>
+                        <p>Urgences uniquement</p>
+                    </div>
+
+                    <div class="info-box emergency-info">
+                        <h3>🚨 Besoin d'aide en urgence ?</h3>
+                        <p>Pour les urgences médicales, ne pas utiliser ce formulaire. Appelez directement :</p>
+                        <a href="tel:+221339551527" class="btn btn-emergency" style="width: 100%; margin-top: 1rem;">+221 33 955 15 27</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="emergency-banner">
+        <div class="container">
+            <div class="emergency-content">
+                <div class="emergency-icon">🚨</div>
+                <div class="emergency-text">
+                    <h3>Besoin d'aide en urgence ?</h3>
+                    <p>Notre service d'urgence est disponible 24h/24</p>
+                </div>
+                <a href="tel:+221339551527" class="btn btn-emergency">Appeler : +221 33 955 15 27</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hôpital Mame Abdoul Aziz Sy Dabakh</h3>
+                    <p>Tivaouane, Sénégal</p>
+                    <p>Établissement public de santé au service de la population</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📍 W5WV+Q6 Tivaouane, Sénégal</p>
+                    <p>📞 <a href="tel:+221339551527">+221 33 955 15 27</a></p>
+                    <p>🕐 Ouvert 24h/24</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="rendez-vous.html">Prendre rendez-vous</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hôpital Mame Abdoul Aziz Sy Dabakh - Tivaouane. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Set minimum date to today
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateInput = document.getElementById('preferred-date');
+            if (dateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.setAttribute('min', today);
+            }
+
+            // Handle appointment form submission
+            const appointmentForm = document.getElementById('appointmentForm');
+            const appointmentMessage = document.getElementById('appointmentMessage');
+
+            if (appointmentForm) {
+                appointmentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = {
+                        patientName: document.getElementById('patient-name').value,
+                        patientAge: document.getElementById('patient-age').value,
+                        patientPhone: document.getElementById('patient-phone').value,
+                        appointmentType: document.getElementById('appointment-type').value,
+                        preferredDate: document.getElementById('preferred-date').value,
+                        preferredTime: document.getElementById('preferred-time').value,
+                        reason: document.getElementById('reason').value,
+                        urgency: document.getElementById('urgency').value
+                    };
+
+                    // Basic validation
+                    if (!formData.patientName || !formData.patientPhone || !formData.appointmentType || 
+                        !formData.preferredDate || !formData.preferredTime || !formData.reason) {
+                        showAppointmentMessage('Veuillez remplir tous les champs obligatoires.', 'error');
+                        return;
+                    }
+
+                    // Simulate form submission (in production, this would send to a server)
+                    showAppointmentMessage('✅ Demande de rendez-vous envoyée avec succès ! Nous vous contacterons au ' + formData.patientPhone + ' pour confirmer votre rendez-vous.', 'success');
+                    
+                    // Reset form
+                    appointmentForm.reset();
+                });
+            }
+
+            function showAppointmentMessage(message, type) {
+                if (appointmentMessage) {
+                    appointmentMessage.textContent = message;
+                    appointmentMessage.className = `form-message ${type}`;
+                    appointmentMessage.style.display = 'block';
+                    
+                    // Scroll to message
+                    appointmentMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    
+                    // Hide message after 8 seconds for success messages
+                    if (type === 'success') {
+                        setTimeout(function() {
+                            appointmentMessage.style.display = 'none';
+                        }, 8000);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
