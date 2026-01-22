@@ -72,9 +72,16 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="patient-phone">Numéro de téléphone *</label>
-                            <input type="tel" id="patient-phone" name="patient-phone" required placeholder="+221 XX XXX XX XX">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="patient-phone">Numéro de téléphone *</label>
+                                <input type="tel" id="patient-phone" name="patient-phone" required placeholder="+221 XX XXX XX XX">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="patient-email">Adresse email *</label>
+                                <input type="email" id="patient-email" name="patient-email" required placeholder="votre@email.com">
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -103,10 +110,8 @@
                                     <option value="09:00">09:00</option>
                                     <option value="10:00">10:00</option>
                                     <option value="11:00">11:00</option>
-                                    <option value="14:00">14:00</option>
-                                    <option value="15:00">15:00</option>
-                                    <option value="16:00">16:00</option>
-                                    <option value="17:00">17:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
                                 </select>
                             </div>
                         </div>
@@ -151,11 +156,10 @@
                     <div class="info-box">
                         <h3>⏰ Horaires de consultation</h3>
                         <p><strong>Lundi - Vendredi :</strong></p>
-                        <p>08:00 - 12:00 et 14:00 - 18:00</p>
-                        <p style="margin-top: 1rem;"><strong>Samedi :</strong></p>
                         <p>08:00 - 13:00</p>
-                        <p style="margin-top: 1rem;"><strong>Dimanche :</strong></p>
-                        <p>Urgences uniquement</p>
+                        <p style="margin-top: 1rem;"><strong>Samedi et Dimanche :</strong></p>
+                        <p>Pas de consultation - Urgences uniquement (24h/24)</p>
+                        <p style="margin-top: 1rem; color: #f44336; font-weight: 600;">🚨 Service d'urgence disponible 24h/24, 7j/7</p>
                     </div>
 
                     <div class="info-box emergency-info">
@@ -206,7 +210,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Hôpital Mame Abdoul Aziz Sy Dabakh - Tivaouane. Tous droits réservés.</p>
+                <p>&copy; Hôpital Mame Abdoul Aziz Sy Dabakh - Tivaouane. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -234,6 +238,7 @@
                         patientName: document.getElementById('patient-name').value,
                         patientAge: document.getElementById('patient-age').value,
                         patientPhone: document.getElementById('patient-phone').value,
+                        patientEmail: document.getElementById('patient-email').value,
                         appointmentType: document.getElementById('appointment-type').value,
                         preferredDate: document.getElementById('preferred-date').value,
                         preferredTime: document.getElementById('preferred-time').value,
@@ -242,7 +247,7 @@
                     };
 
                     // Basic validation
-                    if (!formData.patientName || !formData.patientPhone || !formData.appointmentType || 
+                    if (!formData.patientName || !formData.patientPhone || !formData.patientEmail || !formData.appointmentType || 
                         !formData.preferredDate || !formData.preferredTime || !formData.reason) {
                         showAppointmentMessage('Veuillez remplir tous les champs obligatoires.', 'error');
                         return;
